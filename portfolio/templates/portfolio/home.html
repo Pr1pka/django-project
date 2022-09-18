@@ -1,0 +1,25 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+
+    <h1 class="main-text">Kostiantyn's Portfolio</h1>
+
+    <img class="me" src="{% static 'portfolio/img/me.jpg' %}" alt="">
+    <h4 class="intro">Hello there! I am a beginner python developer from Ukraine and apart from this website, you can see my other projects below.</h4>
+
+    <div class="projects">
+        {% for project in projects %}
+           <div class="project">
+                <img src="{{ project.image.url }}" width="170px" alt="">
+                <a href="{{ project.link }}"><h2>{{ project.title }}</h2></a>
+                <p class="project-description">{{ project.description }}</p>
+                {% if project.url %}
+                    <br><a href="{{ project.url }}">Link</a>
+                {% endif %}
+           </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

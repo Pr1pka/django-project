@@ -1,0 +1,70 @@
+header {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main-text {
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+.me {
+    display: block;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.intro {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 35px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 70px 0;
+
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+.project a {
+    text-decoration: None;
+}
+
+.project-description {
+    font-size: 18px;
+}
+
+.blog-count {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.container-blog {
+    display: flex;
+    flex-direction: column;
+}
+
+.certain-blog {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}

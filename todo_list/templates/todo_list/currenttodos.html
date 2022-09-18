@@ -1,0 +1,19 @@
+{% extends 'todo_list/base.html' %}
+{% block content %}
+
+    <h1 class="current-title">Current todos</h1>
+    <a class="create" href="{% url 'createtodo' %}">Create todo</a>
+
+    {% for i in todo %}
+        <a class="link-to-detail" href="{% url 'detailtodo' i.id %}">
+            <div class="todo">
+                <h4>{% if i.important %}<b>{% endif %}{{ i.title }}{% if i.important %}</b>{% endif %}</h4>
+                <br>
+                <p>{{ i.memo }}</p>
+                <br>
+                <p>{{ i.created }}</p>
+            </div>
+        </a>
+    {% endfor %}
+
+{% endblock %}
